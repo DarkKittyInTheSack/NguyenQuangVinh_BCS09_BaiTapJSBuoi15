@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Quản lý tuyển sinh</h2>
+
+        <div class="col-lg-6 my-4">
+            <label for="mark">Điểm chuẩn hội dồng</label>
+            <input type="number" id="mark" class="form-control">
+        </div>
+
+        <h3>Điểm của thí sinh</h3>
+
+        <div class="col-lg-6 my-4">
+            <label for="markMath">Điểm toán</label>
+            <input type="number" id="markMath" class="form-control">
+        </div>
+
+        <div class="col-lg-6 my-4">
+            <label for="markPhys">Điểm lý</label>
+            <input type="number" id="markPhys" class="form-control">
+        </div>
+
+        <div class="col-lg-6 my-4">
+            <label for="markChem">Điểm hóa</label>
+            <input type="number" id="markChem" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="plusPoint" class="form-label">Điểm ưu tiên theo khu vực</label>
+            <select class="form-select form-select-lg form-control" name="#" id="plusPoint">
+                <option selected>Chọn khu vực</option>
+                <option value="2">A</option>
+                <option value="1">B</option>
+                <option value="0.5">C</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="plusPoint2" class="form-label">Điểm ưu tiên theo đối tượng</label>
+            <select class="form-select form-select-lg form-control" name="#" id="plusPoint2">
+                <option selected>Chọn đối tượng</option>
+                <option value="2">A</option>
+                <option value="1">B</option>
+                <option value="0.5">C</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary" id="calculate">Kết quả</button>
+        <h3 id="result"></h3>
+    </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script src="../js/bai1.js"></script>
+</body>
+
+</html>
