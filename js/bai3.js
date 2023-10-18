@@ -51,7 +51,7 @@ function checkInput(name, income, numberOfPeople){
         return;
     }
 
-    if(income <= 0){
+    if(income <= 0 || income < 60000000){
         alert('Vui lòng nhập số thu nhập cá nhân hợp lệ')
         return;
     }
@@ -71,7 +71,7 @@ document.querySelector('#calculate').onclick = function(){
     var people = document.getElementById('person').value*1
 
     checkInput(name,income,people)
-    var taxMoney = calculateTax(calculateIncome(income,people)) * 1000000
+    var taxMoney = calculateTax(calculateIncome(income,people))
     document.getElementById('result').innerHTML = `Thuế thu nhập của cá nhân ${name} là: ${taxMoney.toLocaleString('it-IT',{
         value: 'currency',
         currency: 'VND'
