@@ -1,5 +1,5 @@
 function calculateIncome(totalIncome, numberOfPeople){
-    return totalIncome - 4 - numberOfPeople *1.6
+    return totalIncome - 4000000 - numberOfPeople *1600000
 }
 
 function calculatePerTaxRate(income, taxRate){
@@ -28,17 +28,17 @@ function calculatePerTaxRate(income, taxRate){
 }
 
 function calculateTax(income){
-    if(income <= 60){
+    if(income <= 60000000){
         return calculatePerTaxRate(income, 5)
-    }else if (income > 60 && income <= 120){
+    }else if (income > 60000000 && income <= 120000000){
         return calculatePerTaxRate(income,10)
-    }else if(income > 120 && income <= 210){
+    }else if(income > 120000000 && income <= 210000000){
         return calculatePerTaxRate(income,15)
-    }else if(income > 210 && income <= 384){
+    }else if(income > 210000000 && income <= 384000000){
         return calculatePerTaxRate(income,20)
-    }else if(income > 384 && income <= 624){
+    }else if(income > 384000000 && income <= 624000000){
         return calculatePerTaxRate(income,25)
-    }else if(income > 624 && income <= 960){
+    }else if(income > 624000000 && income <= 960000000){
         return calculatePerTaxRate(income, 30)
     }else{
         return calculatePerTaxRate(income,35)
