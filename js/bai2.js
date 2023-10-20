@@ -56,8 +56,5 @@ document.querySelector('#calculate').onclick = function(){
     checkInput(name,kw)
 
     var money = calculateKwMoney(kw)
-    document.getElementById('result').innerHTML = `Tiền điện hộ ${name} là : ${money.toLocaleString('it-IT',{
-        value: 'currency',
-        currency: 'VND'
-    })}`
+    document.getElementById('result').innerHTML = `Tiền điện hộ ${name} là : ${money.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}`
 }
