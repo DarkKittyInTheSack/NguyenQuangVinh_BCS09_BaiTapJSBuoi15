@@ -12,31 +12,31 @@ function compareMark(mark1,mark2){
 }
 
 function checkInput(minmark, markChems, marksPhys, markMath, plusArea, plusPerson){
-    if(minmark <= 0  || minmark > 5){
+    if(minmark <= 0  && minmark > 5){
         alert('Điểm chuẩn không hợp lệ')
         return
     }
 
-    if(markChems < 0 || markChems > 10){
+    if(markChems < 0 && markChems > 10){
         alert('Điểm không hợp lệ')
         return
     }
-    if(markMath < 0 || markMath > 10){
-        alert('Điểm không hợp lệ')
-        return
-    }
-
-    if(marksPhys < 0 || marksPhys > 10){
+    if(markMath < 0 && markMath > 10){
         alert('Điểm không hợp lệ')
         return
     }
 
-    if(plusArea < 0 || plusArea > 1){
+    if(marksPhys < 0 && marksPhys > 10){
+        alert('Điểm không hợp lệ')
+        return
+    }
+
+    if(plusArea < 0 && plusArea > 1){
         alert('Vui lòng nhập dữ liệu hợp lệ')
         return
     }
 
-    if(plusPerson < 0 || plusPerson > 1){
+    if(plusPerson < 0 && plusPerson > 1){
         alert('Vui lòng nhập dữ liệu hợp lệ')
         return
     }
@@ -55,7 +55,8 @@ btn.onclick = function(){
     checkInput(minMark,markChems,markPhys,markMath,areaPlus,personPlus)
 
     var markResult = calculateMark(markMath,markPhys,markChems) + areaPlus +personPlus
+    console.log(markResult)
     var result = document.getElementById('result')
     
-    compareMark(markResult) ? result.innerHTML = `Điểm của thí sinh là ${markResult} - Thí sinh đã trúng tuyển` : result.innerHTML = `Điểm của thí sinh là ${markResult} - Thí sinh đã trượt`
+    compareMark(markResult,minMark) == 0 ? result.innerHTML = `Điểm của thí sinh là ${markResult} - Thí sinh đã trúng tuyển` : result.innerHTML = `Điểm của thí sinh là ${markResult} - Thí sinh đã trượt`
 }
