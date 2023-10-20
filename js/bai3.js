@@ -72,8 +72,5 @@ document.querySelector('#calculate').onclick = function(){
 
     checkInput(name,income,people)
     var taxMoney = calculateTax(calculateIncome(income,people))
-    document.getElementById('result').innerHTML = `Thuế thu nhập của cá nhân ${name} là: ${taxMoney.toLocaleString('it-IT',{
-        value: 'currency',
-        currency: 'VND'
-    })}`
+    document.getElementById('result').innerHTML = `Thuế thu nhập của cá nhân ${name} là: ${taxMoney.toLocaleString('it-IT', {style : 'currency', currency : 'VND'})}`
 }
